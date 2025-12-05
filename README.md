@@ -1,6 +1,6 @@
 # Hedvig Policy Manager
 
-You are to build a very basic [insurance policy system](https://en.wikipedia.org/wiki/Insurance_policy), which holds
+You are to build a very basic [insurance policy](https://en.wikipedia.org/wiki/Insurance_policy) server application, which holds
 insurance contracts signed between an insurance provider (Hedvig) and a policyholder (end-users).
 For simplicity, we will also be dealing with a stripped-down version of home insurance.
 
