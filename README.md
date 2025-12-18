@@ -59,7 +59,7 @@ queries the insurances:
 
 ## AI Feature Requirements
 
-### Primary Feature: AI-Powered Policy Document Intelligence
+### AI-Powered Policy Document Intelligence
 
 **Endpoint:** `POST /api/v1/ai/parse-document`
 
@@ -76,15 +76,13 @@ Build a document parsing system that extracts structured policy data from unstru
 - Calculate confidence score (0.0 to 1.0)
 - Return structured extraction results with warnings
 
-### Secondary Feature: Natural Language Policy Search
+### Natural Language Policy Search
 
 **Endpoint:** `GET /api/v1/ai/query?query=<natural language>`
 
 Allow querying policies using natural language.
 
-**Example:** `"Show me policies in Stockholm that started in 2024"`
-
-**Note:** This is optional - focus on document intelligence first. Implement this only if you have time and want to demonstrate breadth.
+**Example:** `"Show policies for member with personal number X between 2024-2025"`
 
 
 ## Testing
