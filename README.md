@@ -26,9 +26,6 @@ To create a valid insurance `Policy`, the following data points need to be colle
 * `postalCode (string)` - the postal code of the home, like "11135"
 * `startDate (date)` - the day this policy begins
 
-The system should then calculate a monthly `premium` associated with the policy. You can choose whichever premium
-calculation strategy you wish — the sky is the limit!
-
 #### Insurance timeline
 
 Typically, insurances can be updated by the policyholder with a new `startDate` and updated information — creating
@@ -41,55 +38,42 @@ You can assume that `personalNumber` never changes between policies inside a sin
 
 There should be an endpoint where insurances can be started by providing enough information to create a first policy.
 
-### Changing your insurance
-
-Policyholders typically need to change their insurance sometimes. For instance, if they decide to move from one
-home to another at a given date. This should effectively put an end date on their existing policy and start a new one.
-
-This endpoint should target a single insurance and create a new policy within it.
-
 ### Reading insurance and policies
 
 There should be ways of reading policies back from the system. Here are some typical use cases for how one typically
 queries the insurances:
 
-* List all `Insurances` for a given `personalNumber`
 * List all `Policies` for a given `personalNumber` on a specific `date`
 * For a given `Insurance`, show its policy on a specific `date`
-
-## AI Feature Requirements
-
-### AI-Powered Policy Document Intelligence
-
-Build a document parsing system that extracts structured policy data from unstructured text using LLMs.
-
-**Functionality:**
-- Accept unstructured policy document text in request body
-- Use an LLM (OpenAI, Anthropic, Azure OpenAI, or other) to extract:
-    - Personal number
-    - Address
-    - Postal code
-    - Start date
-- Validate extracted data
-- Calculate confidence score (0.0 to 1.0)
-- Return structured extraction results with warnings
-- You may use any of the following (free options available):
-    - Google Gemini (free tier recommended)
-    - Groq (free tier with rate limits)
-    - Ollama with local models (llama3, mistral, etc.)
-    - Or paid APIs if you have access (OpenAI, Anthropic, Azure, etc.)
-
 
 ### Policy Assistant
 
 Build a chatbot that can answer questions about specific policies using retrieval-augmented generation.
 
 **Functionality:**
-  - Accept conversational queries: "What's covered under my policy?" or "When does my coverage start?"
-  - Retrieve relevant policy details from database
-  - Use LLM with RAG pattern to generate accurate, context-aware responses
-  - Maintain conversation context across multiple questions
+- Accept conversational queries: "What's covered under my policy?" or "When does my coverage start?"
+- Retrieve relevant policy details from database
+- Use LLM with RAG pattern to generate accurate, context-aware responses
+- Maintain conversation context across multiple questions
 
+### Claim Data Collection
+
+Build a claim parsing system that extracts structured and relevant data from unstructured text.
+
+**Functionality:**
+- Accept unstructured claim submission as input. Example: "I dropped my phone and the screen broke."
+- Use an LLM to extract relevant data from the claim, like type of damage, location, etc.
+- Validate extracted data
+- Calculate confidence score (0.0 to 1.0)
+
+#### LLM API Access
+
+- You may use any of the following (free options available):
+    - Google Gemini (free tier recommended)
+    - Groq (free tier with rate limits)
+    - Ollama with local models (llama3, mistral, etc.)
+    - Or paid APIs if you have access (OpenAI, Anthropic, Azure, etc.)
+  
 ## Testing
 
 Feel free to add tests for your system, and write them in the way you feel brings the most value.
