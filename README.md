@@ -73,6 +73,12 @@ Build a document parsing system that extracts structured policy data from unstru
 - Validate extracted data
 - Calculate confidence score (0.0 to 1.0)
 - Return structured extraction results with warnings
+- You may use any of the following (free options available):
+    - Google Gemini (free tier recommended)
+    - Groq (free tier with rate limits)
+    - Ollama with local models (llama3, mistral, etc.)
+    - Or paid APIs if you have access (OpenAI, Anthropic, Azure, etc.)
+
 
 ### Policy Assistant
 
