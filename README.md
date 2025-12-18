@@ -74,12 +74,15 @@ Build a document parsing system that extracts structured policy data from unstru
 - Calculate confidence score (0.0 to 1.0)
 - Return structured extraction results with warnings
 
-### Natural Language Search
+### Policy Assistant
 
-Allow querying policies using natural language.
+Build a chatbot that can answer questions about specific policies using retrieval-augmented generation.
 
-**Example:** `"Show policies for member with personal number X between 2024-2025"`
-
+**Functionality:**
+  - Accept conversational queries: "What's covered under my policy?" or "When does my coverage start?"
+  - Retrieve relevant policy details from database
+  - Use LLM with RAG pattern to generate accurate, context-aware responses
+  - Maintain conversation context across multiple questions
 
 ## Testing
 
