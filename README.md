@@ -61,8 +61,6 @@ queries the insurances:
 
 ### AI-Powered Policy Document Intelligence
 
-**Endpoint:** `POST /api/v1/ai/parse-document`
-
 Build a document parsing system that extracts structured policy data from unstructured text using LLMs.
 
 **Functionality:**
@@ -76,9 +74,7 @@ Build a document parsing system that extracts structured policy data from unstru
 - Calculate confidence score (0.0 to 1.0)
 - Return structured extraction results with warnings
 
-### Natural Language Policy Search
-
-**Endpoint:** `GET /api/v1/ai/query?query=<natural language>`
+### Natural Language Search
 
 Allow querying policies using natural language.
 
