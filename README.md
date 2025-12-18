@@ -9,10 +9,6 @@ entirely on designing of the APIs and data model of the insurance policies.
 
 If you feel anything is unclear or underspecified, make assumptions and explain your thinking during the interview.
 
-### Use of AI
-
-You are free to use AI during the assignment, especially to research and learn tools you might not yet be familiar with.
-
 ## Getting started
 
 This repo is already set up as a launchable Spring Boot application with enough dependencies to build HTTP endpoints.
@@ -60,6 +56,36 @@ queries the insurances:
 * List all `Insurances` for a given `personalNumber`
 * List all `Policies` for a given `personalNumber` on a specific `date`
 * For a given `Insurance`, show its policy on a specific `date`
+
+## AI Feature Requirements
+
+### Primary Feature: AI-Powered Policy Document Intelligence
+
+**Endpoint:** `POST /api/v1/ai/parse-document`
+
+Build a document parsing system that extracts structured policy data from unstructured text using LLMs.
+
+**Functionality:**
+- Accept unstructured policy document text in request body
+- Use an LLM (OpenAI, Anthropic, Azure OpenAI, or other) to extract:
+    - Personal number
+    - Address
+    - Postal code
+    - Start date
+- Validate extracted data
+- Calculate confidence score (0.0 to 1.0)
+- Return structured extraction results with warnings
+
+### Secondary Feature: Natural Language Policy Search
+
+**Endpoint:** `GET /api/v1/ai/query?query=<natural language>`
+
+Allow querying policies using natural language.
+
+**Example:** `"Show me policies in Stockholm that started in 2024"`
+
+**Note:** This is optional - focus on document intelligence first. Implement this only if you have time and want to demonstrate breadth.
+
 
 ## Testing
 
